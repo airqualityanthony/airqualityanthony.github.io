@@ -38,6 +38,7 @@
 			background-repeat: no-repeat;
 			background-attachment: scroll;
 			min-height: 100vh;
+			padding: 24px 16px 32px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -151,6 +152,38 @@
 		}
 
 		@media (max-width: 900px) {
+			.header {
+				position: static;
+				width: 100%;
+				height: auto;
+				margin-top: 8px;
+				display: flex;
+				justify-content: center;
+				gap: 14px;
+				pointer-events: auto;
+			}
+
+			.icon-link {
+				position: static;
+				left: auto;
+				top: auto;
+				width: clamp(110px, 34vw, 170px);
+			}
+
+			.gif-container {
+				margin-top: 20px;
+				width: min(88vw, 420px);
+			}
+
+			.coming-soon {
+				font-size: clamp(24px, 8vw, 40px);
+				padding: 0 8px;
+			}
+
+			.youtube-container {
+				width: min(92vw, 800px);
+			}
+
 			.company-brand {
 				position: static;
 				transform: none;
