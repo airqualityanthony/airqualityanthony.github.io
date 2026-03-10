@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>On The Air</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-image: url('imgs/background.png');
+			background-size: cover;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-attachment: scroll;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: Arial, sans-serif;
+		}
+
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: 1000;
+			pointer-events: none;
+		}
+
+
+		.icon-link {
+			text-decoration: none;
+			position: absolute;
+			left: var(--x, 50%);
+			top: var(--y, 10%);
+			transform: translate(-50%, -50%);
+			width: clamp(64px, 8vw, 140px);
+			pointer-events: auto;
+		}
+
+		.icon-link img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: transform 0.3s;
+		}
+
+		.icon-link img:hover {
+			transform: scale(1.1);
+		}
+
+		.youtube-container {
+			margin-top: 20px;
+			width: 90%;
+			max-width: 800px;
+			aspect-ratio: 16 / 9;
+		}
+
+		.gif-container {
+			position: relative;
+			margin-top: 100px;
+			width: 60%;
+			max-width: 420px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.gif-container img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+			display: block;
+		}
+
+		.base-gif {
+			position: relative;
+			z-index: 1;
+		}
+
+		.overlay-gif {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			pointer-events: none;
+		}
+
+		.youtube-container iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			border-radius: 8px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<a href="https://store.steampowered.com/wishlist/" class="icon-link" style="--x: 10.1%; --y: 4%;">
+			<img src="imgs/steam_wishlist.png" alt="Icon 1">
+		</a>
+		<a href="https://discord.com/" class="icon-link" style="--x: 19.5%; --y: 4%;">
+			<img src="imgs/discord.png" alt="Icon 2">
+		</a>
+		<a href="https://www.youtube.com/" class="icon-link" style="--x: 26.9%; --y: 4%;">
+			<img src="imgs/youtube.png" alt="Icon 3">
+		</a>
+	</div>
+
+	<div class="gif-container">
+		<img class="base-gif" src="imgs/OnTheAir_IntroLogo.gif" alt="Featured GIF">
+		<img class="overlay-gif" src="imgs\OnTheAir_IntroLogo_text.gif" alt="Overlay GIF">
+	</div>
+
+	<div class="youtube-container">
+		<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen="" loading="lazy"></iframe>
+	</div>
+</body>
+</html>
