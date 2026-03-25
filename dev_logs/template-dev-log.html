@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>On The Air - Dev Log Template</title>
+	<style>
+		@font-face {
+			font-family: 'OnTheAirHeading';
+			src: url('../W95font.otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: 'OnTheAirHeading', Arial, sans-serif;
+			background-image: url('../imgs/background_latest.png');
+			background-size: cover;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-attachment: scroll;
+			color: #ffffff;
+			min-height: 100vh;
+			padding: 28px 16px;
+		}
+
+		article {
+			max-width: 760px;
+			margin: 100px auto 0;
+			background: rgba(0, 0, 0, 0.62);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			border-radius: 12px;
+			padding: 24px;
+			backdrop-filter: blur(2px);
+		}
+
+		h1 {
+			font-size: clamp(26px, 5vw, 42px);
+			letter-spacing: 0.04em;
+			margin-bottom: 10px;
+			text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+		}
+
+		.meta {
+			margin-bottom: 18px;
+			opacity: 0.95;
+			font-weight: 700;
+		}
+
+		.content {
+			line-height: 1.6;
+		}
+
+		.content p {
+			margin-bottom: 12px;
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 10px;
+			margin-top: 24px;
+			flex-wrap: wrap;
+		}
+
+		.nav-link {
+			display: inline-block;
+			padding: 8px 12px;
+			border-radius: 6px;
+			background: rgba(0, 0, 0, 0.5);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		.nav-link:hover,
+		.nav-link:focus-visible {
+			background: rgba(0, 0, 0, 0.7);
+		}
+	</style>
+</head>
+<body>
+	<article>
+		<h1>Dev Log Title Here</h1>
+		<p class="meta">Posted: YYYY-MM-DD</p>
+
+		<div class="content">
+			<p>Summary: Write a short overview of what changed.</p>
+			<p>Details: Add development notes, what was built, and what comes next.</p>
+		</div>
+
+		<div class="nav-links">
+			<a class="nav-link" href="../dev_logs.html">Back to Dev Logs</a>
+			<a class="nav-link" href="../index.html">Back to Homepage</a>
+		</div>
+	</article>
+</body>
+</html>
